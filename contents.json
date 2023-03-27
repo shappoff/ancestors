@@ -1,0 +1,28 @@
+{
+  "paths": [
+    {
+      "type": "file",
+      "value": "index.md"
+    },
+    {
+      "type": "file",
+      "value": "banana.md"
+    }
+  ],
+  "contents": [
+    {
+      "path": "index.md",
+      "url": "index.html",
+      "content": "��A\u0000p\u0000p\u0000l\u0000e\u0000 \u0000t\u0000e\u0000x\u0000t\u0000",
+      "html": "<p>��A�p�p�l�e� �t�e�x�t�</p>\n",
+      "id": 0
+    },
+    {
+      "path": "banana.md",
+      "url": "banana.html",
+      "content": "��\u001c\u00045\u0004=\u0004O\u0004 \u00007\u0004>\u00042\u0004C\u0004B\u0004 \u0000!\u00045\u0004@\u00043\u00045\u00049\u0004\r\u0000\n\u0000",
+      "html": "<p>��\u001c\u00045\u0004=\u0004O\u0004 �7\u0004&gt;\u00042\u0004C\u0004B\u0004 �!\u00045\u0004@\u00043\u00045\u00049\u0004\n�\n�</p>\n",
+      "id": 1
+    }
+  ]
+}
