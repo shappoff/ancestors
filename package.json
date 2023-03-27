@@ -1,0 +1,24 @@
+{
+  "name": "ancestors",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "markdown-folder-to-html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shappoff/ancestors.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shappoff/ancestors/issues"
+  },
+  "homepage": "https://github.com/shappoff/ancestors#readme",
+  "dependencies": {
+    "markdown-folder-to-html": "^2.4.0"
+  }
+}
