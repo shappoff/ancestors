@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /*! ADAPTED
+    Typeplate : Starter Kit
+    URL ........... http://typeplate.com
+    Version ....... 3.0.2
+    Github ........ https://github.com/typeplate/starter-kit
+    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+    License ....... Creative Commmons Attribution 3.0
+    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+    */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-rendering: optimizeLegibility;
+        line-height: 1;
+        margin-top: 0;
+        color: #222;
+      }
+
+      blockquote + figcaption cite {
+        display: block;
+        font-size: inherit;
+        text-align: right;
+      }
+
+      body {
+        word-wrap: break-word;
+      }
+
+      pre code {
+        word-wrap: normal;
+      }
+
+      body {
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        color: #444;
+      }
+
+      h1 {
+        font-size: 2em;
+        /* 2*16 = 32 */
+      }
+
+      h2 {
+        font-size: 1.5em;
+        /* 1.5*16 = 24 */
+      }
+
+      h3 {
+        font-size: 1.17em;
+        /* 1.17*16 = 18.72 */
+      }
+
+      h4 {
+        font-size: 1em;
+        /* 1*16 = 16 */
+      }
+
+      h5 {
+        font-size: 0.83em;
+        /* 0.83*16 = 13.28 */
+      }
+
+      h6 {
+        font-size: 0.75em;
+        /* 0.75*16 = 12 */
+      }
+
+      h1 {
+        margin: 2.42424rem 0 1.454544rem;
+      }
+
+      h2 {
+        margin: 2.0202rem 0 1.21212rem;
+      }
+
+      h3 {
+        margin: 1.61616rem 0 1rem;
+      }
+
+      h4 {
+        margin: 1.21212rem 0 1;
+      }
+
+      h5 {
+        margin: 0.80808rem 0;
+      }
+
+      h6 {
+        margin: 0.70707rem 0;
+      }
+
+      p {
+        margin: auto auto 1.5rem;
+      }
+
+      small {
+        font-size: 65%;
+      }
+
+      input,
+      abbr,
+      acronym,
+      blockquote,
+      code,
+      kbd,
+      q,
+      samp,
+      var {
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      pre {
+        white-space: pre;
+      }
+
+      pre code {
+        white-space: -moz-pre-wrap;
+        white-space: pre-wrap;
+      }
+
+      code {
+        white-space: pre;
+        font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
+      }
+
+      abbr {
+        -webkit-font-variant: small-caps;
+        -moz-font-variant: small-caps;
+        -ms-font-variant: small-caps;
+        font-variant: small-caps;
+        font-weight: 600;
+        text-transform: lowercase;
+        color: gray;
+      }
+
+      abbr[title]:hover {
+        cursor: help;
+      }
+
+      /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        color: #444;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+      }
+
+      code,
+      pre {
+        background-color: #f5f5f5;
+        color: #444;
+        border-radius: 2px;
+        text-shadow: 0px 1px 0px white;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+      }
+
+      pre code {
+        border: none;
+        box-shadow: none;
+      }
+
+      pre {
+        padding: 0.5em;
+      }
+
+      code {
+        display: inline-block;
+        padding: 0 0.5em;
+        line-height: 1.4;
+        font-size: 0.9em;
+      }
+
+      table {
+        border-spacing: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      table th,
+      table td {
+        padding: 0.3em 0.7em;
+      }
+
+      table th {
+        background-color: #f4f4f4;
+        border-bottom: 2px solid #444;
+      }
+
+      table td {
+        border: 1px solid #f5f5f5;
+      }
+
+      /* Add transition to containers so they can push in and out. */
+
+      #layout,
+      #menu,
+      .menu-link {
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+      }
+
+      /* This is the parent `<div>` that contains the menu and the content area. */
+
+      #layout {
+        position: relative;
+        padding-left: 0;
+      }
+
+      #layout.active #menu {
+        left: 250px;
+        width: 250px;
+      }
+
+      #layout.active .menu-link {
+        left: 250px;
+      }
+
+      /* The content `<div>` is where all your content goes. */
+
+      .content {
+        margin: 50px auto;
+        padding: 0 2em;
+        max-width: 80ex;
+        line-height: 1.6em;
+      }
+
+      /*
+      The `#menu` `<div>` is the parent `<div>` that contains the menu that
+      appears on the left side of the page.
+      */
+
+      #menu {
+        margin-left: -250px;
+        /* "#menu" width */
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
+        /* so the menu or its navicon stays above all content */
+        background: #f4f4f4;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 0.9em;
+      }
+
+      @media print {
+        #menu,
+        .menu-link {
+          display: none !important;
+        }
+      }
+
+      a,
+      a * {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      a:visited {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      /* All anchors inside the menu should be styled like this. */
+
+      #menu a {
+        display: block;
+        padding: 0.5em 0.5em;
+      }
+
+      #menu a:first-letter {
+        text-transform: capitalize;
+      }
+
+      #menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 1em 0.5em;
+      }
+
+      #menu ul ul {
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        border-left: 4px solid rgba(255, 255, 255, 0.5);
+      }
+
+      /* Change color of the anchor links on hover/focus. */
+
+      #menu li a:hover,
+      #menu li a:focus {
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      /* This styles the selected menu item `<li>`. */
+
+      #menu li a.active {
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      /* This styles a link within a selected menu item `<li>`. */
+
+      #menu li a.active {
+        color: #222;
+      }
+
+      /* This styles the menu heading. */
+
+      #menu li.heading {
+        font-size: 0.9em;
+        text-transform: uppercase;
+        color: #000;
+      }
+
+      #menu li.heading > * {
+        padding: 0.5em;
+        display: block;
+      }
+
+      #menu li.heading a {
+        color: #0c68af;
+      }
+
+      /* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+      /*
+      `.menu-link` represents the responsive menu toggle that shows/hides on
+      small screens.
+      */
+
+      .menu-link {
+        position: fixed;
+        display: block;
+        /* show this only on small screens */
+        top: 0;
+        left: 0;
+        /* "#menu width" */
+        font-size: 10px;
+        /* change this value to increase/decrease button size */
+        z-index: 10;
+        width: 2em;
+        height: auto;
+        padding: 1.6em 1.2em;
+        border-radius: 0 2px 2px 0;
+      }
+
+      .menu-link:hover {
+        background: #f4f4f4;
+      }
+
+      .menu-link span {
+        position: relative;
+        display: block;
+      }
+
+      .menu-link span,
+      .menu-link span:before,
+      .menu-link span:after {
+        background-color: #555;
+        width: 100%;
+        height: 0.2em;
+        border-radius: 1em;
+      }
+
+      .menu-link span:before,
+      .menu-link span:after {
+        position: absolute;
+        margin-top: -0.6em;
+        content: " ";
+      }
+
+      .menu-link span:after {
+        margin-top: 0.6em;
+      }
+
+      /* Hides the menu at `48em`, but modify this based on your app's needs. */
+
+      @media (min-width: 48em) {
+        .header,
+        .content {
+          padding-left: 2em;
+          padding-right: 2em;
+        }
+
+        #layout {
+          padding-left: 250px;
+          /* left col width "#menu" */
+          left: 0;
+        }
+        #menu {
+          left: 250px;
+        }
+
+        .menu-link {
+          position: fixed;
+          left: 250px;
+          display: none;
+        }
+
+        #layout.active .menu-link {
+          left: 250px;
+        }
+      }
+
+      @media (max-width: 48em) {
+        /* Only apply this when the window is small. Otherwise, the following case results in extra padding on the left:
+         * Make the window small.
+         * Tap the menu to trigger the active state.
+         * Make the window large again.
+         */
+        #layout.active {
+          position: relative;
+          left: 250px;
+        }
+      }
+
+      /* Heading anchors and permalinks */
+      h1[id],
+      h2[id],
+      h3[id],
+      h4[id],
+      h5[id],
+      h6[id] {
+        position: relative;
+      }
+      .heading-anchor-permalink {
+        /* Position the permalink to the left of the title */
+        position: absolute;
+        right: 100%;
+        /* Add some spacing as padding to not lose the hover */
+        padding-right: 0.6rem;
+        /* Make it only visible on heading hover, see below */
+        opacity: 0;
+      }
+      h1[id]:hover .heading-anchor-permalink,
+      h2[id]:hover .heading-anchor-permalink,
+      h3[id]:hover .heading-anchor-permalink,
+      h4[id]:hover .heading-anchor-permalink,
+      h5[id]:hover .heading-anchor-permalink,
+      h6[id]:hover .heading-anchor-permalink {
+        opacity: 0.5;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <div id="layout">
+      <!-- Menu toggle -->
+      <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+      </a>
+      <nav id="menu">
+        <ul>
+<li><a class="" href="index.html">index</a></li>
+<li><a class="" href="2-Машкович-Самуйло-Васильев.html">Машкович Самуйло Васильев</a></li>
+<li><a class="" href="3-Каркоза-Михаил-Гаврилович.html">Каркоза Михаил Гаврилович</a></li>
+<li><a class="" href="3-Машкович-Гурий-Иванович.html">Машкович Гурий Иванович</a></li>
+<li><a class="" href="3-Машкович-Фекла-Кирилловна.html">Машкович Фекла Кирилловна</a></li>
+<li><a class="" href="3-Машкович-Юда-Самуилович.html">Машкович Юда Самуилович</a></li>
+<li><a class="" href="3-Новиков-Лавр-Федорович.html">Новиков Лавр Федорович</a></li>
+<li><a class="" href="4-Каркоза-Александр-Михайлович.html">Каркоза Александр Михайлович</a></li>
+<li><a class="" href="4-Каркоза-Семен-Михайлович.html">Каркоза Семен Михайлович</a></li>
+<li><a class="" href="4-Каркоза-Степан-Михайлович.html">Каркоза Степан Михайлович</a></li>
+<li><a class="" href="4-Козлов-Стефан-Федорович.html">Козлов Стефан Федорович</a></li>
+<li><a class="" href="4-Козлова-Ксения-Федоровна.html">Козлова Ксения Федоровна</a></li>
+<li><a class="" href="4-Конопелько-Петр-Семенович.html">Конопелько Петр Семенович</a></li>
+<li><a class="active" href="4-Конопелько-Семен-Дементьевич.html">Конопелько Семен Дементьевич</a></li>
+<li><a class="" href="4-Конопелько-Яков-Семенович.html">Конопелько Яков Семенович</a></li>
+<li><a class="" href="4-Кузьма-Федоров.html">Кузьма Федоров</a></li>
+<li><a class="" href="4-Машкович-Аким-Юдинович.html">Машкович Аким Юдинович</a></li>
+<li><a class="" href="4-Машкович-Анна-Юдиновна.html">Машкович Анна Юдиновна</a></li>
+<li><a class="" href="4-Машкович-Антон-Юдинович.html">Машкович Антон Юдинович</a></li>
+<li><a class="" href="4-Машкович-Евдоким-Гурьевич.html">Машкович Евдоким Гурьевич</a></li>
+<li><a class="" href="4-Машкович-Евфасий-Юдинович.html">Машкович Евфасий Юдинович</a></li>
+<li><a class="" href="4-Машкович-Екатерина-Юдиновна.html">Машкович Екатерина Юдиновна</a></li>
+<li><a class="" href="4-Машкович-Ефим-Юдинович.html">Машкович Ефим Юдинович</a></li>
+<li><a class="" href="4-Машкович-Захар-Гурьявич.html">Машкович Захар Гурьявич</a></li>
+<li><a class="" href="4-Машкович-Иван-Гурьевич.html">Машкович Иван Гурьевич</a></li>
+<li><a class="" href="4-Машкович-Мария-Юдиновна.html">Машкович Мария Юдиновна</a></li>
+<li><a class="" href="4-Машкович-Марфа-Юдиновна.html">Машкович Марфа Юдиновна</a></li>
+<li><a class="" href="4-Машкович-Николай-Юдинович.html">Машкович Николай Юдинович</a></li>
+<li><a class="" href="4-Машкович-Трофим-Константинович.html">Машкович Трофим Константинович</a></li>
+<li><a class="" href="4-Новиков-Георгий-Лаврович.html">Новиков Георгий Лаврович</a></li>
+<li><a class="" href="4-Новиков-Яков-Лаврович.html">Новиков Яков Лаврович</a></li>
+<li><a class="" href="4-Шоппо-Исак-Михайлович.html">Шоппо Исак Михайлович</a></li>
+<li><a class="" href="5-Karkoza-Ivan-Semenovich.html">Karkoza Ivan Semenovich</a></li>
+<li><a class="" href="5-Захаренкова-Ольга-Кузьминична.html">Захаренкова Ольга Кузьминична</a></li>
+<li><a class="" href="5-Каркоза-Анастасия-Семеновна.html">Каркоза Анастасия Семеновна</a></li>
+<li><a class="" href="5-Каркоза-Настуля-Семеновна.html">Каркоза Настуля Семеновна</a></li>
+<li><a class="" href="5-Конопелько-Агафья-Яковлевна.html">Конопелько Агафья Яковлевна</a></li>
+<li><a class="" href="5-Конопелько-Анна-Семеновна.html">Конопелько Анна Семеновна</a></li>
+<li><a class="" href="5-Конопелько-Домна-Семеновна.html">Конопелько Домна Семеновна</a></li>
+<li><a class="" href="5-Конопелько-Мария-Яковлевна.html">Конопелько Мария Яковлевна</a></li>
+<li><a class="" href="5-Конопелько-Федора-Семёновна.html">Конопелько Федора Семёновна</a></li>
+<li><a class="" href="5-Машкович-Агафья-Трофимовна.html">Машкович Агафья Трофимовна</a></li>
+<li><a class="" href="5-Машкович-Даниил-Трофимович.html">Машкович Даниил Трофимович</a></li>
+<li><a class="" href="5-Машкович-Кристина-Ивановна.html">Машкович Кристина Ивановна</a></li>
+<li><a class="" href="5-Машкович-Марина-Трофимовна.html">Машкович Марина Трофимовна</a></li>
+<li><a class="" href="5-Машкович-Марфа-Трофимовна.html">Машкович Марфа Трофимовна</a></li>
+<li><a class="" href="5-Машкович-Никифор-Трофимович.html">Машкович Никифор Трофимович</a></li>
+<li><a class="" href="5-Машкович-Пелагея-Трофимовна.html">Машкович Пелагея Трофимовна</a></li>
+<li><a class="" href="5-Машкович-Петр-Иванович.html">Машкович Петр Иванович</a></li>
+<li><a class="" href="5-Машкович-Татьяна-Ивановна.html">Машкович Татьяна Ивановна</a></li>
+<li><a class="" href="5-Машкович-Федор-Иванович.html">Машкович Федор Иванович</a></li>
+<li><a class="" href="5-Новиков-Афанасий-Яковлевич.html">Новиков Афанасий Яковлевич</a></li>
+<li><a class="" href="5-Новиков-Иван-Яковлевич.html">Новиков Иван Яковлевич</a></li>
+<li><a class="" href="5-Новиков-Михаил-Яковлевич.html">Новиков Михаил Яковлевич</a></li>
+<li><a class="" href="5-Новиков-Павел-Яковлевич.html">Новиков Павел Яковлевич</a></li>
+<li><a class="" href="5-Новиков-Петр-Яковлевич.html">Новиков Петр Яковлевич</a></li>
+<li><a class="" href="5-Новикова-Анастасия-Яковлевна.html">Новикова Анастасия Яковлевна</a></li>
+<li><a class="" href="5-Новикова-Екатерина-Кузьминична.html">Новикова Екатерина Кузьминична</a></li>
+<li><a class="" href="5-Новикова-Зоя-Яковлевна.html">Новикова Зоя Яковлевна</a></li>
+<li><a class="" href="5-Новикова-Степанида-Кузьминична.html">Новикова Степанида Кузьминична</a></li>
+<li><a class="" href="5-Шаппо-Александр-Исакович.html">Шаппо Александр Исакович</a></li>
+<li><a class="" href="5-Шаппо-Иван-Исакович.html">Шаппо Иван Исакович</a></li>
+<li><a class="" href="5-Шаппо-Тимофей-Исакович.html">Шаппо Тимофей Исакович</a></li>
+<li><a class="" href="5-Шоппо-Мирон-Романович.html">Шоппо Мирон Романович</a></li>
+<li><a class="" href="6-Болсун-Николай-Дмитриевич.html">Болсун Николай Дмитриевич</a></li>
+<li><a class="" href="6-Конопелько-Анна-Ивановна.html">Конопелько Анна Ивановна</a></li>
+<li><a class="" href="6-Конопелько-Леонид-Иванович.html">Конопелько Леонид Иванович</a></li>
+<li><a class="" href="6-Конопелько-Надежда-Ивановна.html">Конопелько Надежда Ивановна</a></li>
+<li><a class="" href="6-Машкович-Анна-Макаровна.html">Машкович Анна Макаровна</a></li>
+<li><a class="" href="6-Машкович-Виктор-Федорович.html">Машкович Виктор Федорович</a></li>
+<li><a class="" href="6-Машкович-Владимир-Федорович.html">Машкович Владимир Федорович</a></li>
+<li><a class="" href="6-Машкович-Ефросиния-Елисеевна.html">Машкович Ефросиния Елисеевна</a></li>
+<li><a class="" href="6-Машкович-Любовь-Федоровна.html">Машкович Любовь Федоровна</a></li>
+<li><a class="" href="6-Машкович-Надежда-Федоровна.html">Машкович Надежда Федоровна</a></li>
+<li><a class="" href="6-Новиков-Александр-Михайлович.html">Новиков Александр Михайлович</a></li>
+<li><a class="" href="6-Новикова-Валентина-Михайловна.html">Новикова Валентина Михайловна</a></li>
+<li><a class="" href="6-Новикова-Екатерина-Михайловна.html">Новикова Екатерина Михайловна</a></li>
+<li><a class="" href="6-Шаппо-Владимир-Иванович.html">Шаппо Владимир Иванович</a></li>
+<li><a class="" href="6-Шаппо-Дмитрий-Иванович.html">Шаппо Дмитрий Иванович</a></li>
+<li><a class="" href="6-Шаппо-Любовь-Ивановна.html">Шаппо Любовь Ивановна</a></li>
+<li><a class="" href="6-Шаппо-Мария-Ивановна.html">Шаппо Мария Ивановна</a></li>
+<li><a class="" href="6-Шаппо-Николай-Иванович.html">Шаппо Николай Иванович</a></li>
+<li><a class="" href="6-Шаппо-Нина-Ивановна.html">Шаппо Нина Ивановна</a></li>
+<li><a class="" href="7-Василевский-Иван-Николаевич.html">Василевский Иван Николаевич</a></li>
+<li><a class="" href="7-Гордейко-Виктор.html">Гордейко Виктор</a></li>
+<li><a class="" href="7-Гулякевич-Александр.html">Гулякевич Александр</a></li>
+<li><a class="" href="7-Гутич-Людмила-Васильевна.html">Гутич Людмила Васильевна</a></li>
+<li><a class="" href="7-Забаронок-Александр.html">Забаронок Александр</a></li>
+<li><a class="" href="7-Конопелько-Михаил-Васильевич.html">Конопелько Михаил Васильевич</a></li>
+<li><a class="" href="7-Машаракина-Жанна.html">Машаракина Жанна</a></li>
+<li><a class="" href="7-Машкович-Людмила-Александровна.html">Машкович Людмила Александровна</a></li>
+<li><a class="" href="7-Машкович-Таисия-Александровна.html">Машкович Таисия Александровна</a></li>
+<li><a class="" href="7-Новиков-Михаил-Александрович.html">Новиков Михаил Александрович</a></li>
+<li><a class="" href="7-Новикова-Валентина-Александровна.html">Новикова Валентина Александровна</a></li>
+<li><a class="" href="7-Новикова-Галина-Александровна.html">Новикова Галина Александровна</a></li>
+<li><a class="" href="7-Новикова-Светлана-Александровна.html">Новикова Светлана Александровна</a></li>
+<li><a class="" href="7-Новикова-Татьяна-Александровна.html">Новикова Татьяна Александровна</a></li>
+<li><a class="" href="7-Парахневич-Геннадий-Эдуардович.html">Парахневич Геннадий Эдуардович</a></li>
+<li><a class="" href="7-Шаппо-Александр-Николаевич.html">Шаппо Александр Николаевич</a></li>
+<li><a class="" href="7-Шаппо-Григорий-Николаевич.html">Шаппо Григорий Николаевич</a></li>
+<li><a class="" href="7-Шаппо-Лилия-Николаевна.html">Шаппо Лилия Николаевна</a></li>
+<li><a class="" href="7-Шаппо-Нина-Николаевна.html">Шаппо Нина Николаевна</a></li>
+<li><a class="" href="8-Бочкова-Светлана.html">Бочкова Светлана</a></li>
+<li><a class="" href="8-Василевская-Наталья-Ивановна.html">Василевская Наталья Ивановна</a></li>
+<li><a class="" href="8-Василевский-Виталий-Иванович.html">Василевский Виталий Иванович</a></li>
+<li><a class="" href="8-Гордейко-Андрей-Викторович.html">Гордейко Андрей Викторович</a></li>
+<li><a class="" href="8-Гордейко-Дарья-Викторовна.html">Гордейко Дарья Викторовна</a></li>
+<li><a class="" href="8-Гулякевич-Алеся-Александровна.html">Гулякевич Алеся Александровна</a></li>
+<li><a class="" href="8-Денисов-Георгий.html">Денисов Георгий</a></li>
+<li><a class="" href="8-Конопелько-Анна-Михайловна.html">Конопелько Анна Михайловна</a></li>
+<li><a class="" href="8-Конопелько-Татьяна-Михайловна.html">Конопелько Татьяна Михайловна</a></li>
+<li><a class="" href="8-Коряченков-Федор-Николаевич.html">Коряченков Федор Николаевич</a></li>
+<li><a class="" href="8-Ливенко-Виктория-Александровна.html">Ливенко Виктория Александровна</a></li>
+<li><a class="" href="8-Люлькович-Дмитрий.html">Люлькович Дмитрий</a></li>
+<li><a class="" href="8-Новиков-Вадим-Михайлович.html">Новиков Вадим Михайлович</a></li>
+<li><a class="" href="8-Парахневич-Алена-Геннадьевна.html">Парахневич Алена Геннадьевна</a></li>
+<li><a class="" href="8-Парахневич-Павел-Геннадьевич.html">Парахневич Павел Геннадьевич</a></li>
+<li><a class="" href="8-Работа-Андрей.html">Работа Андрей</a></li>
+<li><a class="" href="8-Саевец-Юлия.html">Саевец Юлия</a></li>
+<li><a class="" href="8-Шаппо-Александра-Григорьевна.html">Шаппо Александра Григорьевна</a></li>
+<li><a class="" href="8-Шаппо-Игорь-Александрович.html">Шаппо Игорь Александрович</a></li>
+<li><a class="" href="8-Шаппо-Лина-Александровна.html">Шаппо Лина Александровна</a></li>
+<li><a class="" href="8-Шаппо-Сергей-Григорьевич.html">Шаппо Сергей Григорьевич</a></li>
+<li><a class="" href="9-Гордейко-Марк-Андреевич.html">Гордейко Марк Андреевич</a></li>
+<li><a class="" href="9-Гордейко-Ренат-Андреевич.html">Гордейко Ренат Андреевич</a></li>
+<li><a class="" href="9-Гордейко-Тимур-Андреевич.html">Гордейко Тимур Андреевич</a></li>
+<li><a class="" href="9-Денисов-Вечеслав-Георгиевич.html">Денисов Вечеслав Георгиевич</a></li>
+<li><a class="" href="9-Коряченкова-Анна-Федоровна.html">Коряченкова Анна Федоровна</a></li>
+<li><a class="" href="9-Коряченкова-Мария-Федоровна.html">Коряченкова Мария Федоровна</a></li>
+<li><a class="" href="9-Люлькович-Алиса-Дмитревна.html">Люлькович Алиса Дмитревна</a></li>
+<li><a class="" href="9-Парахневич-Веста-Павловна.html">Парахневич Веста Павловна</a></li>
+<li><a class="" href="9-Работа-Дмитрий-Андреевич.html">Работа Дмитрий Андреевич</a></li>
+<li><a class="" href="9-Работа-Ксения-Андреевна.html">Работа Ксения Андреевна</a></li>
+<li><a class="" href="9-Шаппо-Екатерина-Сергеевна.html">Шаппо Екатерина Сергеевна</a></li>
+<li><a class="" href="9-Шаппо-Михаил-Сергеевич.html">Шаппо Михаил Сергеевич</a></li>
+</ul>
+      </nav>
+      <article id="main" class="content">
+        <h3 id="%D0%BA%D0%BE%D0%BD%D0%BE%D0%BF%D0%B5%D0%BB%D1%8C%D0%BA%D0%BE-%D1%81%D0%B5%D0%BC%D0%B5%D0%BD-%D0%B4%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D1%8C%D0%B5%D0%B2%D0%B8%D1%87%2C-(%D0%BF%D1%80%D0%B0-%D0%BF%D1%80%D0%B0%D0%B4%D0%B5%D0%B4%D1%83%D1%88%D0%BA%D0%B0).">Конопелько Семен Дементьевич, (пра-прадедушка). <a class="heading-anchor-permalink" href="#%D0%BA%D0%BE%D0%BD%D0%BE%D0%BF%D0%B5%D0%BB%D1%8C%D0%BA%D0%BE-%D1%81%D0%B5%D0%BC%D0%B5%D0%BD-%D0%B4%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D1%8C%D0%B5%D0%B2%D0%B8%D1%87%2C-(%D0%BF%D1%80%D0%B0-%D0%BF%D1%80%D0%B0%D0%B4%D0%B5%D0%B4%D1%83%D1%88%D0%BA%D0%B0).">#</a></h3>
+<p><em>ум. после 1926-го года, д. Низголово, Мартиновская волость, Лепельский уезд, Витебская губерния.</em></p>
+<p>Известно, со слов тети Нины и тети Люды, что прабабушка Федора была родом из д. Низголово и ее
+девичья фамилия - Конопелько.
+Отчество - Дементьевич стало известно из списка хозяйств 1925 и 1926 гг… Семен Конопелько там один - Дементьевич</p>
+<p>“<em>Конопелько Семен Дементев, народность домохозяина - бел, муж пола - 3, жен пола - 2</em>” - НАРБ, фонд 30, опись 2, дело 6366, лист 220, №2</p>
+<p>“<em>Конопелько Семен Дементьев, Национальность - бл, Всего душ - 6, Грамотных - 0</em>” - НАРБ, фонд 30,опись 2, дело 1537, лист 25 (об.), № Дома 2</p>
+<p>Умер после 1926-го, т.к. он присутствует в списках переписи 1925 и 1926-го.</p>
+
+      </article>
+    </div>
+    <script>
+      // Load contents.json if you need it
+    </script>
+    <script>
+      // FROM http://purecss.io/js/ui.js
+      (function(window, document) {
+        var layout = document.getElementById("layout"),
+          menu = document.getElementById("menu"),
+          menuLink = document.getElementById("menuLink");
+
+        function toggleClass(element, className) {
+          var classes = element.className.split(/\s+/),
+            length = classes.length,
+            i = 0;
+
+          for (; i < length; i++) {
+            if (classes[i] === className) {
+              classes.splice(i, 1);
+              break;
+            }
+          }
+          // The className is not found
+          if (length === classes.length) {
+            classes.push(className);
+          }
+
+          element.className = classes.join(" ");
+        }
+
+        menuLink.onclick = function(e) {
+          var active = "active";
+
+          e.preventDefault();
+          toggleClass(layout, active);
+          toggleClass(menu, active);
+          toggleClass(menuLink, active);
+        };
+      })(this, this.document);
+    </script>
+  </body>
+</html>
