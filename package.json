@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs": "markdown-folder-to-html"
+    "docs": "markdown-folder-to-html",
+    "print": "node markdown-it.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/shappoff/ancestors#readme",
   "dependencies": {
-    "markdown-folder-to-html": "^2.4.0"
+    "markdown-folder-to-html": "^2.4.0",
+    "markdown-it": "^13.0.1"
   }
 }
